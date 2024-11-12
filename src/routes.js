@@ -1,22 +1,10 @@
 const routes = [
   {
-    id: "HomeView",
+    id: 'HomeView',
     name: 'home',
     path: '/',
-    meta: {}
+    meta: {},
   },
-  {
-    id: "ProductsView",
-    name: 'products',
-    path: '/products',
-    meta: {}
-  },
-  {
-    id: "ProductView",
-    name: 'product',
-    path: '/product/:id?',
-    meta: {}
-  }
 ]
 
 export default routes
