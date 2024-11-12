@@ -1,7 +1,7 @@
 <template>
-  <div class="events">
+  <div class="events-container">
     <div>
-      <p>Child:</p>
+      <p>Parent:</p>
       <p>bool: {{ boolVal }}</p>
       <p>Text: {{ strVal }}</p>
     </div>
@@ -29,5 +29,6 @@ const textChangeHandler = (e) => {
 </script>
 
 <style scoped>
-/*  */
+.events-container {
+}
 </style>
