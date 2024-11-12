@@ -1,14 +1,14 @@
 const routes = [
-  {
-    id: 'HomeView',
-    name: 'home',
-    path: '/',
-    meta: {},
-  },
+  // {
+  //   id: 'HomeView',
+  //   name: 'home',
+  //   path: '/',
+  //   meta: {},
+  // },
   {
     id: 'PartOneView',
     name: 'part1',
-    path: '/part1',
+    path: '/',
     meta: {},
   },
   {
