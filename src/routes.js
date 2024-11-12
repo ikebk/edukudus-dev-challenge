@@ -13,8 +13,8 @@ const routes = [
   },
   {
     id: 'PartTwoView',
-    name: 'part1',
-    path: '/part1',
+    name: 'part2',
+    path: '/part2',
     meta: {},
   },
 ]
