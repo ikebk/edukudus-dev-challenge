@@ -30,5 +30,7 @@ const textChangeHandler = (e) => {
 
 <style scoped>
 .events-container {
+  padding: 2rem;
+  background-color: lightcyan;
 }
 </style>
