@@ -6,11 +6,14 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
     <div class="wrapper">
       <nav>
-        <RouterLink to="/">Part 1</RouterLink>
-        <RouterLink to="/part2">Part 2</RouterLink>
+        <RouterLink to="/">Task 1</RouterLink>
+        <RouterLink to="/part2">Task 2</RouterLink>
       </nav>
     </div>
   </header>
+
+  <h1>Edukudu Dev Tech challenge - Isaac Amoako-Boakye</h1>
+  <hr />
 
   <RouterView />
 </template>
@@ -52,22 +55,6 @@ nav a:first-of-type {
 }
 
 @media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
   nav {
     text-align: left;
     margin-left: -1rem;

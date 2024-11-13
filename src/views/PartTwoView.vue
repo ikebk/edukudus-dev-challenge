@@ -16,6 +16,7 @@
       <div class="preview">
         <div v-html="htmlText" />
         <span v-show="compilingStyle">Compiling style. Please wait...</span>
+        <div v-if="previewStyleError" v-text="previewStyleError"></div>
       </div>
 
       <component :is="'style'" scoped>
@@ -35,6 +36,7 @@ const htmlText = ref('')
 const lessText = ref('')
 const previewStyle = ref('')
 const compilingStyle = ref(false)
+const previewStyleError = ref('')
 
 // Watch
 watch(lessText, (to) => {
@@ -42,12 +44,16 @@ watch(lessText, (to) => {
   compilingStyle.value = true
 
   timeOut = setTimeout(() => {
+    previewStyleError.value = ''
+
     render(to)
       .then((css) => {
         previewStyle.value = `.preview { ${css.css} }`
         compilingStyle.value = false
       })
       .catch((err) => {
+        previewStyleError.value = err.message
+        compilingStyle.value = false
         console.warn(err)
       })
   }, 1000)
@@ -70,6 +76,7 @@ watch(lessText, (to) => {
     & .preview {
       width: 100%;
       padding: 0.5rem;
+      border: solid 1px lightgrey;
     }
   }
 }
